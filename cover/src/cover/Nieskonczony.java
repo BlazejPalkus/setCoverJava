@@ -1,5 +1,6 @@
 package cover;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,4 +24,19 @@ public class Nieskonczony extends Skladnik {
         return wspolneWartosci;
 
     }
+
+
+    @Override
+    public Set<Integer> wspolneElementyTegoSkladnikaZInnymZbiorem(Set<Integer> zbior) {
+        Set<Integer> wspolneWartosci = new HashSet<>();
+        int max = Collections.max(zbior);
+        for (int i = this.pierwszyElement; i <= max; i += this.postepArytmetyczny) {
+            if (zbior.contains(i)) {
+                wspolneWartosci.add(i);
+            }
+        }
+
+        return wspolneWartosci;
+    }
 }
+

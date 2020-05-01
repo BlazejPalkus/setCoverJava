@@ -7,10 +7,11 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class NaiwnyTest {
+class ZachlannyTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void znajdzNumeryZbiorowPokrywajacych() {
+
 
         ZbiorDoPokrycia zbiorDoPokrycia1 = new ZbiorDoPokrycia(3);
         Skladnik skladnik1 = new Element(2);
@@ -26,7 +27,6 @@ class NaiwnyTest {
         //zapytanie
         ZbiorDoPokrycia zbiorDoPokrycia2 = new ZbiorDoPokrycia(3);
         List<Integer> listaWzorcowa2 = new LinkedList<>();
-        listaWzorcowa2.add(1);
         listaWzorcowa2.add(2);
         listaWzorcowa2.add(5);
 
@@ -40,7 +40,6 @@ class NaiwnyTest {
 
         ZbiorDoPokrycia zbiorDoPokrycia3 = new ZbiorDoPokrycia(6);
         List<Integer> listaWzorcowa3 = new LinkedList<>();
-        listaWzorcowa3.add(1);
         listaWzorcowa3.add(2);
         listaWzorcowa3.add(5);
         listaWzorcowa3.add(6);
@@ -52,7 +51,6 @@ class NaiwnyTest {
         //zapytanie
         ZbiorDoPokrycia zbiorDoPokrycia4 = new ZbiorDoPokrycia(6);
         List<Integer> listaWzorcowa4 = new LinkedList<>();
-        listaWzorcowa4.add(1);
         listaWzorcowa4.add(2);
         listaWzorcowa4.add(5);
         listaWzorcowa4.add(6);
@@ -118,23 +116,23 @@ class NaiwnyTest {
         listaZbiorow4.add(zbior8);
 
 
-        Algorytm naiwny = new Naiwny();
+        Algorytm zach = new Zachlanny();
 
-        List<Integer> naiwna1 = new LinkedList<>();
-        List<Integer> naiwna2 = new LinkedList<>();
-        List<Integer> naiwna3 = new LinkedList<>();
-        List<Integer> naiwna4 = new LinkedList<>();
+        List<Integer> zach1 = new LinkedList<>();
+        List<Integer> zach2 = new LinkedList<>();
+        List<Integer> zach3 = new LinkedList<>();
+        List<Integer> zach4 = new LinkedList<>();
 
-        naiwna1 = naiwny.znajdzNumeryZbiorowPokrywajacych(listaZbiorow1, zbiorDoPokrycia1);
-        naiwna2 = naiwny.znajdzNumeryZbiorowPokrywajacych(listaZbiorow2, zbiorDoPokrycia2);
-        naiwna3 = naiwny.znajdzNumeryZbiorowPokrywajacych(listaZbiorow3, zbiorDoPokrycia3);
-        naiwna4 = naiwny.znajdzNumeryZbiorowPokrywajacych(listaZbiorow4, zbiorDoPokrycia4);
+        zach1 = zach.znajdzNumeryZbiorowPokrywajacych(listaZbiorow1, zbiorDoPokrycia1);
+        zach2 = zach.znajdzNumeryZbiorowPokrywajacych(listaZbiorow2, zbiorDoPokrycia2);
+        zach3 = zach.znajdzNumeryZbiorowPokrywajacych(listaZbiorow3, zbiorDoPokrycia3);
+        zach4 = zach.znajdzNumeryZbiorowPokrywajacych(listaZbiorow4, zbiorDoPokrycia4);
 
 
-        assertArrayEquals(listaWzorcowa1.toArray(), naiwna1.toArray());
-        assertArrayEquals(listaWzorcowa2.toArray(), naiwna2.toArray());
-        assertArrayEquals(listaWzorcowa3.toArray(), naiwna3.toArray());
-        assertArrayEquals(listaWzorcowa4.toArray(), naiwna4.toArray());
+        assertArrayEquals(listaWzorcowa1.toArray(), zach1.toArray());
+        assertArrayEquals(listaWzorcowa2.toArray(), zach2.toArray());
+        assertArrayEquals(listaWzorcowa3.toArray(), zach3.toArray());
+        assertArrayEquals(listaWzorcowa4.toArray(), zach4.toArray());
 
         //assertTrue(naiwny.czyZostalPokrytyCalyZbior(listaZbiorow, zbiorDoPokrycia, naiwny.znajdzNumeryZbiorowPokrywajacych(listaZbiorow, zbiorDoPokrycia)));
 
