@@ -1,15 +1,12 @@
 package cover;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Zbior {
-    List<Skladnik> skladnikiZbioru;
+    private Set<Skladnik> skladnikiZbioru = new HashSet<>();
 
-    void dodajSkladnikDoZbioru(Skladnik skladnik) {
+    public void dodajSkladnikDoZbioru(Skladnik skladnik) {
         skladnikiZbioru.add(skladnik);
-        return;
     }
 
     Set<Integer> wspolneElementyTegoZbioruIZbioruDoPokrycia(ZbiorDoPokrycia zbiorDoPokrycia) {

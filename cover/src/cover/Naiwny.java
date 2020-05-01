@@ -9,10 +9,8 @@ public class Naiwny extends Algorytm {
 
 
     @Override
-    public List<Integer> znajdzNumeryZbiorowPokrywajacych(List<Zbior> rodzinaZbiorow, int wielkoscZbioruDoPokrycia) {
-
-        ZbiorDoPokrycia zbiorDoPokrycia = new ZbiorDoPokrycia(wielkoscZbioruDoPokrycia);
-//        Set<Integer> wspolneElementy = new HashSet<>();
+    public List<Integer> znajdzNumeryZbiorowPokrywajacych(List<Zbior> rodzinaZbiorow, ZbiorDoPokrycia zbiorDoPokrycia) {
+//       Tutaj musze przekazac zbior do pokrycia a nie jego wielkosc
         Set<Integer> dotychczasPokryty = new HashSet<>();
         List<Integer> indeksyZbiorowPokrywajacych = new LinkedList<>();
 
@@ -21,10 +19,10 @@ public class Naiwny extends Algorytm {
             Set<Integer> wspolneElementy = zbiorZRodziny.wspolneElementyTegoZbioruIZbioruDoPokrycia(zbiorDoPokrycia);
             if (!dotychczasPokryty.containsAll(wspolneElementy)) {
                 dotychczasPokryty.addAll(wspolneElementy);
-                indeksyZbiorowPokrywajacych.add(i);
+                indeksyZbiorowPokrywajacych.add(i + 1);
             }
         }
 
-        return indeksyZbiorowPokrywajacych;
+        return indeksyZbiorowPokrywajacych; //zawsze i tak jest uporzadkowany, wiec zwraca liste posortowana rosnaco
     }
 }
