@@ -131,10 +131,10 @@ class NaiwnyTest {
         naiwna4 = naiwny.znajdzNumeryZbiorowPokrywajacych(listaZbiorow4, zbiorDoPokrycia4);
 
 
-        assertArrayEquals(listaWzorcowa1.toArray(), naiwna1.toArray());
-        assertArrayEquals(listaWzorcowa2.toArray(), naiwna2.toArray());
-        assertArrayEquals(listaWzorcowa3.toArray(), naiwna3.toArray());
-        assertArrayEquals(listaWzorcowa4.toArray(), naiwna4.toArray());
+        assertEquals(listaWzorcowa1, naiwna1);
+        assertEquals(listaWzorcowa2, naiwna2);
+        assertEquals(listaWzorcowa3, naiwna3);
+        assertEquals(listaWzorcowa4, naiwna4);
 
         //assertTrue(naiwny.czyZostalPokrytyCalyZbior(listaZbiorow, zbiorDoPokrycia, naiwny.znajdzNumeryZbiorowPokrywajacych(listaZbiorow, zbiorDoPokrycia)));
 

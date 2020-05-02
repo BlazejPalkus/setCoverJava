@@ -129,10 +129,10 @@ class ZachlannyTest {
         zach4 = zach.znajdzNumeryZbiorowPokrywajacych(listaZbiorow4, zbiorDoPokrycia4);
 
 
-        assertArrayEquals(listaWzorcowa1.toArray(), zach1.toArray());
-        assertArrayEquals(listaWzorcowa2.toArray(), zach2.toArray());
-        assertArrayEquals(listaWzorcowa3.toArray(), zach3.toArray());
-        assertArrayEquals(listaWzorcowa4.toArray(), zach4.toArray());
+        assertEquals(listaWzorcowa1, zach1);
+        assertEquals(listaWzorcowa2, zach2);
+        assertEquals(listaWzorcowa3, zach3);
+        assertEquals(listaWzorcowa4, zach4);
 
         //assertTrue(naiwny.czyZostalPokrytyCalyZbior(listaZbiorow, zbiorDoPokrycia, naiwny.znajdzNumeryZbiorowPokrywajacych(listaZbiorow, zbiorDoPokrycia)));
 
