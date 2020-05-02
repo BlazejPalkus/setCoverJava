@@ -25,6 +25,10 @@ public class ZbiorDoPokrycia {
         }
         return zbiorDoPokrycia;
     }
-    
+
+    @Override
+    public String toString() {
+        return stworzZbiorDoPokrycia().toString();
+    }
 
 }

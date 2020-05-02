@@ -20,6 +20,7 @@ public class Zbior {
             wspolneElementy.addAll(skladnik.wspolneElementySkladnikaZeZbiorem(zbiorDoPokrycia));
         }
 
+
         return wspolneElementy;
     }
 
@@ -37,4 +38,6 @@ public class Zbior {
     public int wielkosc() {
         return skladnikiZbioru.size();
     }
+
+
 }
