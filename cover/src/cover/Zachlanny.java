@@ -35,13 +35,13 @@ public class Zachlanny extends Algorytm {
                         wspolneElementyTegoZbioruIZbioruDoPokrycia(zbiorDoPokrycia);
                 pozostaloDoPokrycia.removeAll(dotychczasPokryty);
                 indeksyZbiorowPokrywajacych.add(indeksNajwiekszego);
-            } else {
+            }
+            else {
                 indeksyZbiorowPokrywajacych.add(0);
                 return indeksyZbiorowPokrywajacych;
             }
         }
-
-        System.out.println(" ");
+        
         if (!pozostaloDoPokrycia.isEmpty()) {
             indeksyZbiorowPokrywajacych.clear();
             indeksyZbiorowPokrywajacych.add(0);

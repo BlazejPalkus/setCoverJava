@@ -7,7 +7,53 @@ public class Main {
 
 
     public static void main(String[] args) {
-        return;
+        String przyklad = "2 0\n" +
+                "\n" +
+                "   1      0 1\n" +
+                "\n" +
+                "0 -3\n" +
+                "1\n" +
+                "0\n" +
+                "2 3 2 0\n" +
+                "-3 3\n" +
+                "-3 2\n" +
+                "-3 1\n" +
+                "4 -1 -5 1000000000 0\n" +
+                "2 -2 0\n" +
+                "-6 3\n" +
+                "-6 2\n" +
+                "-6 1\n" +
+                "1 6 0\n" +
+                "-6 3\n" +
+                "-6 2\n" +
+                "-6 1\n";
+
+        String output = "0\n" +
+                "1 2 5\n" +
+                "2 5\n" +
+                "2 5\n" +
+                "1 2 5 6 7\n" +
+                "2 5 6 7\n" +
+                "2 5 6 7\n" +
+                "1 2 5 6 7\n" +
+                "2 5 6 7\n" +
+                "5 6 8\n";
+
+        Scanner scaner = new Scanner(przyklad);
+        List<Integer> lista = Main.zapiszWejscieNaListe(scaner);
+        Interpreter interpreter = new Interpreter(lista);
+        interpreter.zinterpretujWejscie();
+    }
+
+    public static List<Integer> zapiszWejscieNaListe(Scanner scaner) {
+
+        List<Integer> listaZParametrami = new LinkedList<>();
+
+        while (scaner.hasNext()) {
+            Integer nastepnaLiczba = scaner.nextInt();
+            listaZParametrami.add(nastepnaLiczba);
+        }
+        return listaZParametrami;
     }
 }
 

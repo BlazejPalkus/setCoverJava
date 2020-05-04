@@ -13,6 +13,13 @@ public class Zbior {
         skladnikiZbioru.add(skladnik);
     }
 
+    public boolean czyZbiorJestPusty() {
+        if (skladnikiZbioru == null) {
+            return true;
+        }
+        return false;
+    }
+
     public Set<Integer> wspolneElementyTegoZbioruIZbioruDoPokrycia(ZbiorDoPokrycia zbiorDoPokrycia) {
         Set<Integer> wspolneElementy = new HashSet<>();
 
